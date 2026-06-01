@@ -1,0 +1,60 @@
+.section {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
+  border-top: 1px solid var(--border);
+}
+
+.sectionTitle {
+  margin-bottom: var(--space-md);
+}
+
+.text {
+  font-size: 1.125rem;
+  color: var(--tx2);
+  max-width: var(--content-max);
+  margin-bottom: var(--space-lg);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+}
+
+.links a {
+  font-weight: 600;
+}
+
+.skills {
+  margin-top: var(--space-xl);
+}
+
+.skillsTitle {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--tx3);
+  margin-bottom: var(--space-sm);
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+  padding: 0;
+}
+
+.skill {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  color: var(--tx2);
+}

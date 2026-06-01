@@ -1,0 +1,25 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.inner {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--tx3);
+}
+
+.inner a {
+  color: var(--tx2);
+  text-decoration: none;
+}
+
+.inner a:hover {
+  color: var(--red);
+}

@@ -1,0 +1,76 @@
+.hero {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--red);
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  margin-bottom: var(--space-md);
+  max-width: 18ch;
+}
+
+.headline {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  color: var(--tx2);
+  max-width: 42rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.intro {
+  font-size: 1.125rem;
+  color: var(--tx2);
+  max-width: 40rem;
+  margin-bottom: var(--space-xl);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.primary {
+  background: var(--red);
+  color: var(--card);
+  border: 1px solid var(--red);
+}
+
+.primary:hover {
+  background: var(--tx1);
+  border-color: var(--tx1);
+  color: var(--card);
+  text-decoration: none;
+}
+
+.secondary {
+  background: var(--card);
+  color: var(--tx1);
+  border: 1px solid var(--border);
+}
+
+.secondary:hover {
+  border-color: var(--border2);
+  text-decoration: none;
+}

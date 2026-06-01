@@ -1,0 +1,93 @@
+.section {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-lg);
+  border-top: 1px solid var(--border);
+}
+
+.sectionTitle {
+  margin-bottom: var(--space-2xl);
+}
+
+.entry {
+  margin-bottom: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  border-bottom: 1px solid var(--border);
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.company {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: var(--space-xs);
+}
+
+.meta {
+  font-size: 0.9375rem;
+  color: var(--tx3);
+  margin-bottom: var(--space-md);
+}
+
+.summary {
+  font-size: 1.125rem;
+  color: var(--tx2);
+  max-width: var(--content-max);
+  margin-bottom: var(--space-lg);
+}
+
+.role {
+  margin-bottom: var(--space-lg);
+}
+
+.roleTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.roleDates {
+  font-size: 0.875rem;
+  color: var(--tx3);
+  margin-bottom: var(--space-sm);
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  max-width: var(--content-max);
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: var(--space-sm);
+  color: var(--tx2);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red-decorative);
+}
+
+.articleLinks {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.articleLink {
+  font-size: 0.875rem;
+  font-weight: 600;
+}

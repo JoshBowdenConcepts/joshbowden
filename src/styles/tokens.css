@@ -1,0 +1,66 @@
+:root {
+  /* Backgrounds */
+  --bg1: #fefefb;
+  --bg2: #f2f1ed;
+  --card: #ffffff;
+
+  /* Text — tx3 darkened for WCAG AA on light backgrounds */
+  --tx1: #1a1a18;
+  --tx2: #5a5a55;
+  --tx3: #6b6b64;
+
+  /* Accent — interactive colors darkened for 4.5:1 on bg1 */
+  --red: #c42e24;
+  --red-decorative: #e8392d;
+  --red-bg: #fef2f1;
+  --red-border: #f5c6c2;
+
+  --blue: #2d6bc4;
+  --blue-bg: #eff5fd;
+  --blue-border: #bdd4f0;
+
+  --amber: #8a6a0f;
+  --amber-bg: #fdf6e7;
+  --amber-border: #f0dca0;
+
+  --green: #2d8f5e;
+  --green-bg: #edfaf2;
+  --green-border: #a0dec7;
+
+  --purple: #7c5cc4;
+  --purple-bg: #f5f0fd;
+
+  --teal: #1f6780;
+  --teal-bg: #edf9f7;
+
+  --border: #e4e3de;
+  --border2: #d4cfc8;
+
+  /* Typography families (set by next/font in layout) */
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-dm-sans), -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Layout */
+  --content-max: 720px;
+  --page-max: 960px;
+
+  /* Radius & shadow */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-pill: 40px;
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+  /* Focus */
+  --focus-ring: 2px solid var(--red);
+  --focus-offset: 3px;
+}
