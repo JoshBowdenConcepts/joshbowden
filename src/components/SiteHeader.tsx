@@ -12,13 +12,18 @@ export default function SiteHeader() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo}>
-          Josh Bowden
+          <span className={styles.logoMark} aria-hidden="true">
+            JB
+          </span>
+          <span className={styles.logoText}>Josh Bowden</span>
         </Link>
-        <nav aria-label="Primary">
+        <nav className={styles.navWrap} aria-label="Primary">
           <ul className={styles.nav}>
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <Link href={item.href} className={styles.navLink}>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

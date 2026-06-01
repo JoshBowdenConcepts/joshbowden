@@ -45,29 +45,31 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   }
 
   return (
-    <article className={styles.page}>
+    <main id="main-content" className={styles.page}>
       <Link href="/#articles" className={styles.back}>
         ← Back to articles
       </Link>
-      <header className={styles.header}>
-        <h1 className={styles.title}>{article.title}</h1>
-        <p className={styles.meta}>
-          {formatDate(article.date)}
-          {article.readTime ? ` · ${article.readTime}` : ""}
-        </p>
-        {article.tags && article.tags.length > 0 && (
-          <ul className={styles.tags} aria-label="Tags">
-            {article.tags.map((tag) => (
-              <li key={tag} className={styles.tag}>
-                {tag}
-              </li>
-            ))}
-          </ul>
-        )}
-      </header>
-      <div className={styles.content}>
-        <MarkdownContent content={article.content} />
-      </div>
-    </article>
+      <article>
+        <header className={styles.header}>
+          <h1 className={styles.title}>{article.title}</h1>
+          <p className={styles.meta}>
+            {formatDate(article.date)}
+            {article.readTime ? ` · ${article.readTime}` : ""}
+          </p>
+          {article.tags && article.tags.length > 0 && (
+            <ul className={styles.tags} aria-label="Tags">
+              {article.tags.map((tag) => (
+                <li key={tag} className={styles.tag}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          )}
+        </header>
+        <div className={styles.content}>
+          <MarkdownContent content={article.content} />
+        </div>
+      </article>
+    </main>
   );
 }

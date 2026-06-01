@@ -39,10 +39,13 @@ export default function Contact() {
       </div>
       <div className={styles.skills}>
         <p className={styles.skillsTitle}>Education</p>
-        <ul className={styles.skillList}>
+        <ul className={styles.educationList}>
           {education.map((edu) => (
-            <li key={edu.institution} className={styles.skill}>
-              {edu.institution} — {edu.degree} ({edu.dates})
+            <li key={edu.institution} className={styles.educationItem}>
+              <span className={styles.educationInstitution}>{edu.institution}</span>
+              <span className={styles.educationDetail}>
+                {edu.degree} ({edu.dates})
+              </span>
             </li>
           ))}
         </ul>

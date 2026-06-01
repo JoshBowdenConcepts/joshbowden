@@ -58,3 +58,42 @@
   border-radius: var(--radius-pill);
   color: var(--tx2);
 }
+
+.skillList li {
+  margin: 0;
+}
+
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+  max-width: var(--content-max);
+}
+
+.educationList li {
+  margin: 0;
+}
+
+.educationItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--tx2);
+  line-height: 1.5;
+}
+
+.educationInstitution {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--tx1);
+}
+
+.educationDetail {
+  font-size: 0.875rem;
+}

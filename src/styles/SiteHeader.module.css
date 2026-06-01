@@ -2,9 +2,10 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: color-mix(in srgb, var(--bg1) 92%, transparent);
-  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--bg1) 88%, transparent);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--border) 60%, transparent);
 }
 
 .inner {
@@ -18,10 +19,12 @@
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   color: var(--tx1);
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 .logo:hover {
@@ -29,28 +32,84 @@
   text-decoration: none;
 }
 
+.logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  background: var(--red-bg);
+  border: 1px solid var(--red-border);
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.navWrap {
+  flex-shrink: 0;
+}
+
 .nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: var(--space-md);
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav a {
+.nav li {
+  margin: 0;
+}
+
+.navLink {
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--tx2);
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
-.nav a:hover {
+.navLink:hover {
   color: var(--tx1);
+  text-decoration: none;
+}
+
+.navLink:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
 }
 
 @media (max-width: 640px) {
   .inner {
     flex-direction: column;
-    align-items: flex-start;
-    padding: var(--space-sm);
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+  }
+
+  .navWrap {
+    width: 100%;
+  }
+
+  .nav {
+    width: 100%;
+    gap: var(--space-lg);
+  }
+
+  .navLink {
+    font-size: 0.875rem;
   }
 }

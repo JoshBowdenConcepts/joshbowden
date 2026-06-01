@@ -49,7 +49,38 @@ The article is available at `/articles/your-slug` (filename without `.md`).
 - `src/styles/` — CSS modules and design tokens
 - `scripts/check-contrast.mjs` — WCAG contrast validation
 
-## Deploy to Vercel
+## Deploy to GitHub Pages
+
+The site is a static export deployed automatically on every push to `main`.
+
+**Live URL:** [https://joshbowdenconcepts.github.io/joshbowden/](https://joshbowdenconcepts.github.io/joshbowden/)
+
+### One-time GitHub setup
+
+1. Open **Settings → Pages** on the repo
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Push to `main` — the [Deploy to GitHub Pages](.github/workflows/deploy.yml) workflow builds and publishes the `out/` folder
+
+### Local preview (matches production)
+
+```bash
+npm run build:pages
+npm run preview:pages
+```
+
+Open [http://localhost:3000/joshbowden/](http://localhost:3000/joshbowden/) (serve prints the exact URL).
+
+### Custom domain
+
+If you connect a custom domain (e.g. `joshbowdenconcepts.com`) in **Settings → Pages**, build without the repo subpath:
+
+```bash
+npm run build
+```
+
+Then deploy the `out/` folder, or remove `GITHUB_PAGES: "true"` from the workflow so assets load from the domain root.
+
+## Deploy to Vercel (optional)
 
 1. Push this repo to GitHub (`JoshBowdenConcepts/joshbowden`)
 2. Import the repository at [vercel.com/new](https://vercel.com/new)

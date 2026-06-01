@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { portfolioData } from "@/data/portfolio";
+import { getCaseStudyUrl } from "@/lib/caseStudies";
 import styles from "@/styles/WorkSection.module.css";
 
 function formatDateRange(start: string, end?: string) {
@@ -43,7 +44,7 @@ export default function WorkSection() {
               {entry.articleLinks.map((link) => (
                 <Link
                   key={link.slug}
-                  href={`/articles/${link.slug}`}
+                  href={getCaseStudyUrl(entry.id, link.slug)}
                   className={styles.articleLink}
                 >
                   {link.title} →
