@@ -1,6 +1,10 @@
 # Josh Bowden — Portfolio
 
-Personal portfolio site built with Next.js, styled from the [powerpoints](https://github.com/JoshBowdenConcepts/powerpoints) presentation design system, with WCAG 2.1 AA accessibility baseline.
+Personal portfolio built with Next.js and deployed to GitHub Pages.
+
+**Live site:** [joshbowdenconcepts.github.io/joshbowden](https://joshbowdenconcepts.github.io/joshbowden/)
+
+Styled from the [powerpoints](https://github.com/JoshBowdenConcepts/powerpoints) presentation design system, with a WCAG 2.1 AA accessibility baseline.
 
 ## Getting started
 
@@ -16,14 +20,45 @@ Open [http://localhost:3000](http://localhost:3000).
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Start development server |
-| `npm run build` | Production build |
-| `npm run start` | Start production server |
+| `npm run build:pages` | Build static export for GitHub Pages |
+| `npm run preview:pages` | Preview the `out/` folder locally |
+| `npm run build` | Build static export without the `/joshbowden` base path |
 | `npm run lint` | Run ESLint |
 | `npm run check-contrast` | Verify design token contrast ratios |
 
-## Adding articles
+The site uses `output: "export"` — there is no Node server in production. Use `npm run dev` while developing and `npm run preview:pages` to test the production build.
 
-Create a markdown file in `src/content/articles/` with frontmatter:
+## Deployment
+
+Every push to `main` triggers [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which builds the static site and publishes it to GitHub Pages.
+
+### One-time setup
+
+1. Open **Settings → Pages** on the repo
+2. Set **Build and deployment → Source** to **GitHub Actions**
+
+### Preview production locally
+
+```bash
+npm run build:pages
+npm run preview:pages
+```
+
+Open the URL printed by `serve` (typically [http://localhost:3000/joshbowden/](http://localhost:3000/joshbowden/)).
+
+### Custom domain
+
+To use a root domain (e.g. `joshbowdenconcepts.com`) instead of the `github.io/joshbowden` subpath:
+
+1. Add the domain under **Settings → Pages**
+2. Remove `GITHUB_PAGES: "true"` from the deploy workflow (or run `npm run build` locally)
+3. Redeploy so assets load from `/` instead of `/joshbowden/`
+
+## Adding content
+
+### Articles
+
+Create a markdown file in `src/content/articles/`:
 
 ```yaml
 ---
@@ -38,7 +73,15 @@ readTime: "5 min read"
 Your article body in markdown…
 ```
 
-The article is available at `/articles/your-slug` (filename without `.md`).
+Available at `/articles/your-slug` (filename without `.md`).
+
+### Case studies
+
+Work entries link to `/work/{company-id}/{slug}` (e.g. `/work/github/internal-asset-library-github`). Slugs map to article markdown via `src/lib/caseStudies.ts` and `src/data/portfolio.ts`.
+
+### Profile data
+
+Edit `src/data/portfolio.ts` for work history, skills, education, and contact info.
 
 ## Project structure
 
@@ -46,59 +89,7 @@ The article is available at `/articles/your-slug` (filename without `.md`).
 - `src/components/` — React components
 - `src/content/articles/` — Markdown articles
 - `src/data/portfolio.ts` — Career and profile data
+- `src/lib/` — Article and case study helpers
 - `src/styles/` — CSS modules and design tokens
 - `scripts/check-contrast.mjs` — WCAG contrast validation
-
-## Deploy to GitHub Pages
-
-The site is a static export deployed automatically on every push to `main`.
-
-**Live URL:** [https://joshbowdenconcepts.github.io/joshbowden/](https://joshbowdenconcepts.github.io/joshbowden/)
-
-### One-time GitHub setup
-
-1. Open **Settings → Pages** on the repo
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. Push to `main` — the [Deploy to GitHub Pages](.github/workflows/deploy.yml) workflow builds and publishes the `out/` folder
-
-### Local preview (matches production)
-
-```bash
-npm run build:pages
-npm run preview:pages
-```
-
-Open [http://localhost:3000/joshbowden/](http://localhost:3000/joshbowden/) (serve prints the exact URL).
-
-### Custom domain
-
-If you connect a custom domain (e.g. `joshbowdenconcepts.com`) in **Settings → Pages**, build without the repo subpath:
-
-```bash
-npm run build
-```
-
-Then deploy the `out/` folder, or remove `GITHUB_PAGES: "true"` from the workflow so assets load from the domain root.
-
-## Deploy to Vercel (optional)
-
-1. Push this repo to GitHub (`JoshBowdenConcepts/joshbowden`)
-2. Import the repository at [vercel.com/new](https://vercel.com/new)
-3. Use default Next.js settings (build: `npm run build`, output: default)
-4. Optionally connect custom domain `joshbowdenconcepts.com`
-
-## GitHub setup
-
-If `gh` is not authenticated:
-
-```bash
-gh auth login
-gh repo create JoshBowdenConcepts/joshbowden --public --source=. --remote=origin --push
-```
-
-Or create the repo on GitHub and:
-
-```bash
-git remote add origin https://github.com/JoshBowdenConcepts/joshbowden.git
-git push -u origin main
-```
+- `.github/workflows/deploy.yml` — GitHub Pages CI/CD
