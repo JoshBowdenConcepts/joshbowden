@@ -3,17 +3,26 @@
   margin: 0 auto;
   padding: var(--space-2xl) var(--space-lg) var(--space-3xl);
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section > * {
+  width: 100%;
+  max-width: var(--content-max);
 }
 
 .sectionTitle {
   margin-bottom: var(--space-md);
+  text-align: center;
 }
 
 .text {
   font-size: 1.125rem;
   color: var(--tx2);
-  max-width: var(--content-max);
   margin-bottom: var(--space-lg);
+  text-align: center;
 }
 
 .links {
@@ -22,10 +31,15 @@
   gap: var(--space-md);
   list-style: none;
   padding: 0;
+  justify-content: center;
 }
 
 .links a {
   font-weight: 600;
+}
+
+.links li {
+  margin: 0;
 }
 
 .skills {
@@ -39,6 +53,7 @@
   letter-spacing: 0.12em;
   color: var(--tx3);
   margin-bottom: var(--space-sm);
+  text-align: center;
 }
 
 .skillList {
@@ -47,6 +62,7 @@
   gap: var(--space-xs);
   list-style: none;
   padding: 0;
+  justify-content: center;
 }
 
 .skill {
@@ -69,7 +85,6 @@
   gap: var(--space-sm);
   list-style: none;
   padding: 0;
-  max-width: var(--content-max);
 }
 
 .educationList li {
