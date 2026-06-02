@@ -3,16 +3,26 @@
   margin: 0 auto;
   padding: var(--space-2xl) var(--space-lg);
   border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section > * {
+  width: 100%;
+  max-width: var(--content-max);
 }
 
 .sectionTitle {
   margin-bottom: var(--space-2xl);
+  text-align: center;
 }
 
 .entry {
   margin-bottom: var(--space-3xl);
   padding-bottom: var(--space-3xl);
   border-bottom: 1px solid var(--border);
+  text-align: left;
 }
 
 .entry:last-child {
@@ -35,7 +45,6 @@
 .summary {
   font-size: 1.125rem;
   color: var(--tx2);
-  max-width: var(--content-max);
   margin-bottom: var(--space-lg);
 }
 
@@ -57,7 +66,7 @@
 .highlights {
   list-style: none;
   padding: 0;
-  max-width: var(--content-max);
+  text-align: left;
 }
 
 .highlights li {
