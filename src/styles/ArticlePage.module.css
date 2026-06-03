@@ -1,25 +1,30 @@
 .page {
+  --back-bar-height: calc(2.75rem + 2 * var(--space-sm));
   max-width: var(--page-max);
   margin: 0 auto;
-  padding: var(--space-lg) var(--space-lg) var(--space-3xl);
+  padding: calc(var(--space-lg) + var(--back-bar-height)) var(--space-lg)
+    var(--space-3xl);
 }
 
 .back {
-  position: sticky;
+  position: fixed;
   top: calc(var(--site-header-offset) + env(safe-area-inset-top, 0px));
+  left: 0;
+  right: 0;
   z-index: 40;
   display: flex;
   align-items: center;
-  width: calc(100% + 2 * var(--space-lg));
-  margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-lg)) var(--space-lg);
-  padding: var(--space-sm) var(--space-lg);
   min-height: 2.75rem;
+  padding: var(--space-sm) max(
+      var(--space-lg),
+      calc((100vw - var(--page-max)) / 2 + var(--space-lg))
+    );
   font-weight: 600;
   font-size: 0.9375rem;
   color: var(--tx1);
   text-decoration: none;
-  background: color-mix(in srgb, var(--bg1) 94%, transparent);
-  backdrop-filter: blur(8px);
+  background: var(--bg1);
+  border-bottom: 1px solid var(--border);
 }
 
 .back:hover {
@@ -69,14 +74,12 @@
 
 @media (max-width: 640px) {
   .page {
-    padding: var(--space-sm) var(--space-md) var(--space-2xl);
+    padding: calc(var(--space-sm) + var(--back-bar-height)) var(--space-md)
+      var(--space-2xl);
   }
 
   .back {
-    width: calc(100% + 2 * var(--space-md));
-    margin: calc(-1 * var(--space-sm)) calc(-1 * var(--space-md)) var(--space-md);
     padding: var(--space-sm) var(--space-md);
-    min-height: 2.75rem;
     font-size: 1rem;
   }
 }

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getFeaturedArticles } from "@/lib/articles";
 import styles from "@/styles/ArticleCard.module.css";
 
+const FEATURED_COUNT = 4;
+
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", {
     year: "numeric",
@@ -11,7 +13,7 @@ function formatDate(dateStr: string) {
 }
 
 export default function FeaturedArticles() {
-  const articles = getFeaturedArticles();
+  const articles = getFeaturedArticles().slice(0, FEATURED_COUNT);
 
   return (
     <section
@@ -26,7 +28,7 @@ export default function FeaturedArticles() {
         {articles.map((article) => (
           <Link
             key={article.slug}
-            href={`/articles/${article.slug}`}
+            href={`/articles/${article.slug}/`}
             className={styles.card}
           >
             <h3 className={styles.cardTitle}>{article.title}</h3>
@@ -39,6 +41,9 @@ export default function FeaturedArticles() {
           </Link>
         ))}
       </div>
+      <Link href="/articles/" className={styles.allLink}>
+        View all articles →
+      </Link>
     </section>
   );
 }
