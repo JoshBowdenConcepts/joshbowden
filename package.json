@@ -9,7 +9,8 @@
     "preview:pages": "npx --yes serve out",
     "start": "next start",
     "lint": "eslint",
-    "check-contrast": "node scripts/check-contrast.mjs"
+    "check-contrast": "node scripts/check-contrast.mjs",
+    "generate:linkedin-banner": "node scripts/generate-linkedin-banner.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
