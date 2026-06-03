@@ -46,7 +46,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <main id="main-content" className={styles.page}>
-      <Link href="/#articles" className={styles.back}>
+      <Link href="/articles/" className={styles.back}>
         ← Back to articles
       </Link>
       <article>

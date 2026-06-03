@@ -68,6 +68,6 @@
 
 @media (max-width: 640px) {
   :root {
-    --site-header-offset: 7.5rem;
+    --site-header-offset: 7rem;
   }
 }
