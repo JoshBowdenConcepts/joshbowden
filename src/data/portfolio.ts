@@ -19,7 +19,7 @@ export const portfolioData: PortfolioData = {
     ],
   },
   about:
-    "Design System Engineer specializing in scalable, high-impact solutions across engineering organizations. I plan and pitch token systems adopted across teams, facilitate alignment sessions that unite teams around a clear vision, and engineer forward-looking roadmaps for design systems. I build systems that meet technical needs and foster creativity and collaboration.",
+    "Design System Engineer specializing in creating scalable, high-impact solutions that drive efficiency and consistency across engineering organizations. With a passion for designing systems that not only meet technical needs but also foster creativity and collaboration.",
   work: [
     {
       id: "american-express",
