@@ -1,0 +1,2 @@
+npm run generate:og-image
+git add public/og-image.png
