@@ -1,3 +1,8 @@
+/**
+ * Generate public/og-image.png from homepage hero content.
+ * Run: npm run generate:og-image
+ *      sh scripts/generate-og-image.sh
+ */
 import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
