@@ -11,6 +11,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--site-header-offset);
+  /* Match footer so overscroll / safe-area below footer isn't page bg */
+  background: var(--bg2);
 }
 
 @media (prefers-reduced-motion: reduce) {
