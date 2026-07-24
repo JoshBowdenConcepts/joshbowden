@@ -69,7 +69,7 @@ That's when we knew it was time for a change.
 
 Design systems are built on foundations, so we naturally started from the ground up. First, we created the "design system" as in the design rules and concepts that exist in and out of code. Then we created our ideal token structure for this fresh system. Next, we had to map the old system to the new tokens and remove the bloat. Then we built the new token system in code and replaced the old with the new.
 
-Then we started building out components one by one, replacing the MUI ones with the ones we had built. We started with the most used components and went down from there to have the largest effect and to prevent more rework. Because at the same time people are still developing—if we leave button for the end, there could be 50 new buttons by the time we finish, and that makes it that much harder.
+Then we started building out components one by one, replacing the MUI ones with the ones we had built. We started with the most used components and went down from there to have the largest effect and to prevent more rework. Because at the same time people are still developing. If we leave button for the end, there could be 50 new buttons by the time we finish, and that makes it that much harder.
 
 ## The Biggest Challenge
 

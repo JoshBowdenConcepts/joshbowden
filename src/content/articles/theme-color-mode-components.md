@@ -13,7 +13,7 @@ When you're building a design system that needs to serve three separate products
 
 We had three separate themes for three separate products, but they all shared the same front-end framework: React and CSS. The challenge was clear: how do we support all these separate needs without creating three separate component libraries?
 
-We realized pretty quickly that, other than design, the functional needs were largely the same. Components that functioned as expected. Components that were accessible. Components that let developers build applications quickly. When you get into programming, you learn about DRY programming—Don't Repeat Yourself. In the absolute nature of that idea, we thought: why copy components into each of these systems just because the styles are slightly different? Instead, let's create one set of functional components that could be designed to a user's needs.
+We realized pretty quickly that, other than design, the functional needs were largely the same. Components that functioned as expected. Components that were accessible. Components that let developers build applications quickly. When you get into programming, you learn about DRY programming: Don't Repeat Yourself. In the absolute nature of that idea, we thought: why copy components into each of these systems just because the styles are slightly different? Instead, let's create one set of functional components that could be designed to a user's needs.
 
 ## The Token System
 
@@ -27,7 +27,7 @@ The result? Two different consumption patterns. Our CSS-in-JS team gets full typ
 
 The key insight was token naming. Token names are the same across all themes. This makes it easy to have theme awareness. The downside is that some tokens that one theme doesn't need might still need to be loaded, but that's a really small inefficiency compared to the value of having components that become theme-aware just by where they're loaded.
 
-The main token CSS is loaded into each application separately and in different ways that our team manages. Components automatically adapt based on which CSS file is loaded. No special logic needed—just consistent naming.
+The main token CSS is loaded into each application separately and in different ways that our team manages. Components automatically adapt based on which CSS file is loaded. No special logic needed, just consistent naming.
 
 ## Color Mode Support
 
@@ -51,7 +51,7 @@ This flexibility means we can experiment with new themes or variations without r
 
 Ideally, I would have started fresh. We actually took two already somewhat built systems and made this one look and act almost like a mix of both. I think that was a mistake. We should have started fresh and updated features as we went.
 
-Old code isn't necessarily good code—it just already exists, which can feel like a win in the moment. But merging two systems created complexity and technical debt that we're still dealing with. Starting with a clean slate would have been better, even if it meant rebuilding some features.
+Old code isn't necessarily good code. It just already exists, which can feel like a win in the moment. But merging two systems created complexity and technical debt that we're still dealing with. Starting with a clean slate would have been better, even if it meant rebuilding some features.
 
 ## The Key Takeaway
 

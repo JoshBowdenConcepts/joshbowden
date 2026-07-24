@@ -7,13 +7,13 @@ tags: ["design-systems", "tokens"]
 readTime: "6 min read"
 ---
 
-Token systems define the design logic for entire companies. When we were building our token system at American Express, we needed to support three different brands and two different color modes. We wanted usability to be forefront—engineers and designers should be able to quickly switch between products with different themes but still be able to effectively use and understand the design system. More importantly, they should be able to use the tokens the same way in both places, without having to learn different patterns or conventions depending on which product they're working on.
+Token systems define the design logic for entire companies. When we were building our token system at American Express, we needed to support three different brands and two different color modes. We wanted usability to be forefront. Engineers and designers should be able to quickly switch between products with different themes but still be able to effectively use and understand the design system. More importantly, they should be able to use the tokens the same way in both places, without having to learn different patterns or conventions depending on which product they're working on.
 
 Now, creating token systems has been done many times over, and there are a lot of standards in the industry. But I wanted to share my take on how it went for us and the considerations we made.
 
 ## The Great Debate: Semantic vs. Explicit
 
-Our biggest struggle was that we had a difference of opinion on how to write tokens. I wanted them to be purely semantic—I wanted designers to think less about the value they reflected and more about their specific use case. Another team member thought the opposite.
+Our biggest struggle was that we had a difference of opinion on how to write tokens. I wanted them to be purely semantic. I wanted designers to think less about the value they reflected and more about their specific use case. Another team member thought the opposite.
 
 This was the crux of our challenges. It's a fundamental question: do you name tokens based on what they're used for (semantic), or based on what they represent (explicit)?
 
@@ -21,7 +21,7 @@ We ended up finding a middle ground. Some tokens were semantic, and others were 
 
 ## When Explicit Tokens Break
 
-Shortly after releasing, we came to an issue with using the explicit tokens that I had been expecting. This was regarding spacing specifically. We had the idea that using a multiple of the base value for the token name—say `space-100` for 4px and `space-200` for 8px—would make it easier for designers.
+Shortly after releasing, we came to an issue with using the explicit tokens that I had been expecting. This was regarding spacing specifically. We had the idea that using a multiple of the base value for the token name (say `space-100` for 4px and `space-200` for 8px) would make it easier for designers.
 
 But then a product came along that didn't follow a token system with an even scale but had to use the same values. Now we lost connection between the explicit naming depending on the product you were working on.
 
@@ -35,7 +35,7 @@ I would have pushed for it to be more semantic and teach people that from the be
 
 Is the former not worth the effort, or is the latter more confusing in the long run? Which is worse? I'll let the readers decide because I still am not sure.
 
-There's a real tension here. Semantic tokens require more mental overhead upfront—you have to learn what `spacing-sm` means rather than just seeing `space-100` and knowing it's a small increment. But semantic tokens are more flexible and maintain their meaning across different products and contexts.
+There's a real tension here. Semantic tokens require more mental overhead upfront. You have to learn what `spacing-sm` means rather than just seeing `space-100` and knowing it's a small increment. But semantic tokens are more flexible and maintain their meaning across different products and contexts.
 
 ## What Worked Really Well
 
@@ -49,15 +49,15 @@ Of course, you can't stop there. We focused really hard on documentation. And no
 
 It's important to provide docs in different formats for people that prefer them. Although it's extra work, you will end up doing it anyway if people ignore your docs altogether. When documentation is hard to find or in a format people don't like, they'll either ask you directly or make up their own patterns. Both are more work than just providing good documentation upfront.
 
-Documentation isn't just about having it—it's about making it accessible, discoverable, and in formats that match how different people learn and work.
+Documentation isn't just about having it. It's about making it accessible, discoverable, and in formats that match how different people learn and work.
 
 ## The Key Takeaway
 
 Alignment is key. Regardless of the decision you make, after you make it, everyone needs to be on board to support it. You can always decide to change it down the line, but if you don't support it together, then your users will have a bad experience.
 
-This applies to the semantic vs. explicit debate, to documentation strategies, to naming conventions—everything. Once you make a decision, the team needs to commit to it. Inconsistency in how tokens are used or understood creates confusion and undermines the whole system.
+This applies to the semantic vs. explicit debate, to documentation strategies, to naming conventions, to everything. Once you make a decision, the team needs to commit to it. Inconsistency in how tokens are used or understood creates confusion and undermines the whole system.
 
-Token systems are foundational. They affect every component, every design decision, every product. Getting alignment on how they work isn't just nice to have—it's essential.
+Token systems are foundational. They affect every component, every design decision, every product. Getting alignment on how they work isn't just nice to have. It's essential.
 
 ## Looking Back
 

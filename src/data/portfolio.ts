@@ -6,7 +6,7 @@ export const portfolioData: PortfolioData = {
     pronouns: "He/Him",
     headline:
       "Technical Lead & Engineering Mentor · Design Systems · Accessibility",
-    location: "Greater Boston",
+    location: "Boston, MA",
     email: "joshbowdenconcepts@gmail.com",
     linkedin: "https://www.linkedin.com/in/joshua-bowden/",
     photo: "/profile-photo.jpg",
@@ -19,23 +19,23 @@ export const portfolioData: PortfolioData = {
     ],
   },
   about:
-    "Design System Engineer specializing in creating scalable, high-impact solutions that drive efficiency and consistency across engineering organizations. With a passion for designing systems that not only meet technical needs but also foster creativity and collaboration.",
+    "Engineering leader specializing in frontend platforms, design systems, and technical strategy. I partner with engineering, design, and product organizations to build scalable UI foundations that improve developer experience, accessibility, and product consistency. Passionate about aligning teams around a shared technical vision, mentoring engineers, and delivering platforms that enable organizations to move faster.",
   work: [
     {
       id: "american-express",
       company: "American Express",
       location: "Remote",
       summary:
-        "Technical lead for design systems supporting Global Dining products—unified tokens, CI/CD, visual regression testing, and governance that drove adoption across four major products.",
+        "Technical lead for design systems supporting Global Dining products, covering unified tokens, CI/CD, visual regression testing, and governance that drove adoption across four major products.",
       roles: [
         {
           title: "Senior Software Engineer II, Design Systems @ Global Dining",
           startDate: "Apr 2025",
           highlights: [
-            "Technical Lead for the Design System Team with 89% adoption of the net-new design system across a large product refresh.",
-            "Led architecture, strategy, and rollout of a unified design token system as the single source of truth across four major products.",
-            "Owned infrastructure: CI/CD pipelines, Storybook environments, automated icon workflows, and custom visual regression testing.",
-            "Established governance, quality, and accessibility standards while mentoring engineers.",
+            "Drove an 89% adoption rate for the net-new design system, accelerating development and improving UI consistency across a large-scale product refresh.",
+            "Led design system strategy and roadmap execution, aligning engineering, design, and product teams around a shared vision for scalable UI infrastructure.",
+            "Built the design system platform, including CI/CD pipelines, Storybook environments, automated icon tooling, and visual regression testing, which improved adoption and system reliability.",
+            "Embedded governance into engineering workflows through custom linting rules, automated quality checks, and AI-ready development guidance, enabling consistent implementation across engineers and coding agents.",
           ],
           articleSlug: "visual-regression-custom-testing",
         },
@@ -44,9 +44,9 @@ export const portfolioData: PortfolioData = {
           startDate: "Oct 2023",
           endDate: "Apr 2025",
           highlights: [
-            "Spearheaded pitch, planning, and development of a custom token system adopted across the engineering organization in Q4 2024.",
-            "Enabled seamless custom themes for four major projects through a unified, scalable styling framework.",
-            "Designed and facilitated strategic brainstorming sessions for end-of-year alignment around a North Star vision.",
+            "Defined the architecture and rollout of a unified design token system that became the single source of truth across four major products, enabling scalable theming and a consistent UI foundation.",
+            "Spearheaded the pitch, planning, and development of the token system, adopted across the engineering organization in Q4 2024.",
+            "Designed and facilitated strategic brainstorming sessions to align the organization around a North Star vision.",
             "Engineered forward-looking roadmaps for long-term design system evolution.",
           ],
           articleSlug: "theme-color-mode-components",
@@ -69,16 +69,17 @@ export const portfolioData: PortfolioData = {
       company: "ADPList",
       location: "Remote",
       summary:
-        "Mentored engineers globally on design systems, frontend architecture, and career development—including four mentees who secured their first engineering roles.",
+        "Mentored engineers globally on design systems, frontend architecture, and career development, including four mentees who secured their first engineering roles.",
       roles: [
         {
           title: "Engineering Mentor",
           startDate: "Jul 2023",
           endDate: "Dec 2024",
           highlights: [
-            "Mentored engineers on design systems, frontend architecture, and career progression.",
-            "Coached engineers transitioning into senior roles on communication, decision-making, and system design.",
-            "Recognized as ADPList Top 1% Mentor across multiple months.",
+            "Mentored engineers globally on design systems, frontend architecture, and career development.",
+            "Helped engineers transition into senior engineering roles through coaching on communication, decision-making, and system design.",
+            "Coached mentees through personal and professional challenges to communicate more effectively in their jobs and in interviews.",
+            "Recognized as an ADPList Top 1% Mentor across multiple months.",
           ],
         },
       ],
@@ -91,14 +92,14 @@ export const portfolioData: PortfolioData = {
         "Senior engineer on GitHub’s design system with ownership over roadmap initiatives, layout architecture, asset governance, and WCAG AA accessibility improvements.",
       roles: [
         {
-          title: "Senior Software Engineer — Design Systems",
+          title: "Senior Software Engineer, Design Systems",
           startDate: "Aug 2022",
           endDate: "Sep 2023",
           highlights: [
-            "Led delivery of roadmap-level design system initiatives spanning 3–6 month efforts.",
-            "Architected a 12-column Grid system that standardized page layout across the application.",
-            "Developed a centralized asset management system for third-party image assets with licensing compliance.",
-            "Partnered on WCAG AA accessibility audits and contributed fixes across design system components.",
+            "Led roadmap-scale design system initiatives spanning 3–6 months, partnering across engineering, design, and product to improve UI consistency and accelerate product development.",
+            "Designed and implemented a responsive layout system that standardized page composition across the application, replacing inconsistent patterns with reusable foundations for building complex product experiences.",
+            "Built a centralized asset management system to securely distribute and govern third-party image assets, eliminating manual workflows while improving compliance, discoverability, and version control.",
+            "Partnered on WCAG AA accessibility initiatives while volunteering on the accessibility champions team, auditing design system components and implementing improvements that raised accessibility standards across the product.",
           ],
           articleSlug: "internal-asset-library-github",
         },
@@ -115,21 +116,21 @@ export const portfolioData: PortfolioData = {
       company: "CarGurus",
       location: "Cambridge, MA",
       summary:
-        "Built and led design system architecture from foundation through senior engineering—component libraries, DX tooling, and consumer-facing UI at scale.",
+        "Built and led design system architecture from foundation through senior engineering, spanning component libraries, DX tooling, and consumer-facing UI at scale.",
       roles: [
         {
-          title: "Senior Software Engineer — Design System",
+          title: "Senior Software Engineer, Design System",
           startDate: "Jan 2022",
           endDate: "Aug 2022",
           highlights: [
-            "Led architecture and development of the shared component library used across product teams.",
-            "Acted as primary bridge between design and engineering for system decisions.",
-            "Built DX tooling including GitHub Actions and Webpack plugins.",
+            "Architected and delivered a shared design system and component library that became the scalable UI foundation for multiple product teams.",
+            "Served as a key bridge between design and engineering, driving architectural alignment and proactively delivering components that unblocked product teams.",
+            "Engineered CI/CD and developer tooling (GitHub Actions, Webpack plugins) that automated build and release workflows and reduced manual overhead.",
           ],
           articleSlug: "mui-to-custom-design-system",
         },
         {
-          title: "Software Engineer — Design System",
+          title: "Software Engineer, Design System",
           startDate: "Sep 2021",
           endDate: "Jan 2022",
           highlights: [
@@ -139,11 +140,11 @@ export const portfolioData: PortfolioData = {
           ],
         },
         {
-          title: "Software Engineer — Consumer (Frontend / UI)",
+          title: "Software Engineer, Consumer (Frontend / UI)",
           startDate: "Dec 2019",
           endDate: "Sep 2021",
           highlights: [
-            "Shipped growth-focused features for a high-traffic consumer website.",
+            "Delivered large-scale UI redesigns for the homepage and primary search experiences (new and used cars), partnering with product and design to modernize high-traffic surfaces.",
             "Led frontend implementation of major page redesigns from design through production.",
             "Supported company-wide releases as part of the Push Gurus group.",
           ],
@@ -168,9 +169,9 @@ export const portfolioData: PortfolioData = {
           startDate: "Dec 2018",
           endDate: "Dec 2019",
           highlights: [
-            "Partnered with client engineering teams to integrate Cylindo’s 3D configuration platform into production websites.",
-            "Built internal tools and demos to support customer integrations and onboarding.",
-            "Acted as a technical partner in sales engagements on architecture and implementation.",
+            "Integrated Cylindo’s 3D product visualization platform into customer websites, partnering with engineering teams to deliver production-ready implementations.",
+            "Developed internal tooling and demos that reduced onboarding effort and improved the customer integration experience.",
+            "Collaborated with sales and customer teams to validate implementation approaches and support successful enterprise deployments.",
           ],
         },
       ],
