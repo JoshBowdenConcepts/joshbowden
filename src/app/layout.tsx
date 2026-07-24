@@ -25,13 +25,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Josh Bowden — Design Systems & Accessibility",
+    default: "Josh Bowden · Design Systems & Accessibility",
     template: "%s | Josh Bowden",
   },
   description:
     "Technical Lead and Engineering Mentor specializing in design systems, accessibility, and frontend architecture. Based in Greater Boston.",
   openGraph: {
-    title: "Josh Bowden — Design Systems & Accessibility",
+    title: "Josh Bowden · Design Systems & Accessibility",
     description:
       "Technical Lead and Engineering Mentor specializing in design systems, accessibility, and frontend architecture.",
     type: "website",
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Josh Bowden — Design Systems & Accessibility",
+        alt: "Josh Bowden · Design Systems & Accessibility",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Josh Bowden — Design Systems & Accessibility",
+    title: "Josh Bowden · Design Systems & Accessibility",
     description:
       "Technical Lead and Engineering Mentor specializing in design systems, accessibility, and frontend architecture.",
     images: ["/og-image.png"],

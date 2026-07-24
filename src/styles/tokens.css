@@ -4,12 +4,12 @@
   --bg2: #f2f1ed;
   --card: #ffffff;
 
-  /* Text — tx3 darkened for WCAG AA on light backgrounds */
+  /* Text: tx3 darkened for WCAG AA on light backgrounds */
   --tx1: #1a1a18;
   --tx2: #5a5a55;
   --tx3: #6b6b64;
 
-  /* Accent — interactive colors darkened for 4.5:1 on bg1 */
+  /* Accent: interactive colors darkened for 4.5:1 on bg1 */
   --red: #c42e24;
   --red-decorative: #e8392d;
   --red-bg: #fef2f1;
