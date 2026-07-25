@@ -74,3 +74,17 @@
 .markdown em {
   color: var(--tx3);
 }
+
+.markdown img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0 var(--space-xs);
+}
+
+/* Image caption/citation: an italic paragraph placed directly after an image */
+.markdown img + p em,
+.markdown p:has(> img) + p em {
+  font-size: 0.85rem;
+}
